@@ -1,4 +1,4 @@
-// dear imgui: null/dummy example application
+// dear imgui: "null" example application
 // (compile and link imgui, create context, run headless with NO INPUTS, NO GRAPHICS OUTPUT)
 // This is useful to test building, but you cannot interact with anything here!
 #include "imgui.h"
@@ -11,7 +11,7 @@ int main(int, char**)
     ImGuiIO& io = ImGui::GetIO();
 
     // Build atlas
-    unsigned char* tex_pixels = NULL;
+    unsigned char* tex_pixels = nullptr;
     int tex_w, tex_h;
     io.Fonts->GetTexDataAsRGBA32(&tex_pixels, &tex_w, &tex_h);
 
@@ -26,7 +26,7 @@ int main(int, char**)
         ImGui::Text("Hello, world!");
         ImGui::SliderFloat("float", &f, 0.0f, 1.0f);
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
-        ImGui::ShowDemoWindow(NULL);
+        ImGui::ShowDemoWindow(nullptr);
 
         ImGui::Render();
     }
